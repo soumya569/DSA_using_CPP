@@ -11,11 +11,31 @@ void solve1(int arr[],int n){
     for (int i=0;i<n;i++ )
     arr[i]=arr[i]*10;
 }
+bool findTarget(int arr[],int size,int target){
+    for (int i=0;i<size;i++){
+        if (arr[i]==target){
+            return true;
+        }
+    }
+    return false;
+}
 int main(){
-    int arr[]={1,2,3,4,5};
-    int size=5;
-    solve1(arr,size);
-    print(arr,size);
+    // int arr[]={1,2,3,4,5};
+    // int size=5;
+    int arr[100];
+    int size ;
+    cout<<"Enter the number of element:"<<endl;
+    cin>>size;
+    for (int i=0;i<size;i++){
+        cout<<"enter the value of index:"<<" "<<endl;
+        cin>>arr[i];
+    }
+    // solve1(arr,size);
+    // print(arr,size);
+    int target = 67;
+    bool ans = findTarget( arr,size,target);
+    cout << "ans"<<ans<<endl;
+
     
     //variable define
     //int age = 20;
